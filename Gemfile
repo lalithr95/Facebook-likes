@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'materialize-sass'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem "koala", "~> 2.2"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
