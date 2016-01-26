@@ -26,7 +26,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem "koala", "~> 2.2"
 gem "highcharts-rails"
-gem 'puma'
+gem 'unicorn'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
