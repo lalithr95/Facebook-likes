@@ -14,4 +14,6 @@
 //= require materialize-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require highcharts
+//= require highcharts/highcharts-more
 //= require_tree .
