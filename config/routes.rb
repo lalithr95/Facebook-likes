@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'facebook' => 'facebook#index'
+  root 'facebook#index'
   match '/auth/:provider/callback', to: 'facebook#create', via: [:get, :post]
   match '/likes', to: 'facebook#likes', via: [:get]
   # The priority is based upon order of creation: first created -> highest priority.
