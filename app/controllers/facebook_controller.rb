@@ -50,7 +50,7 @@ class FacebookController < ApplicationController
 			end
 		end
 		result = Array.new
-		state.each do |k, v|
+		state.sort.to_h.each do |k, v|
 			result << [k, v]
 		end
 		result

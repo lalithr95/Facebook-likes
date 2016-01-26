@@ -36,5 +36,3 @@ jQuery ->
 					name: 'Facebook Likes'
 					data: data
 				]
-
-
