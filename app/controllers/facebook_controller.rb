@@ -18,13 +18,17 @@ class FacebookController < ApplicationController
 			@graph = Koala::Facebook::API.new(session[:access_token])
 			result = Array.new
 			data = @graph.get_connection("me", "likes", {limit: 100})
-			data.each do |like|
-				datetime = DateTime.iso8601(like['created_time'])
-				year = datetime.year
-				month = datetime.month
-				day = datetime.day
-				result << "Date.UTC(#{year},#{month},#{day})"
+			while data.next_page
+				data.each do |like|
+					datetime = DateTime.iso8601(like['created_time'])
+					year = datetime.year
+					month = datetime.month
+					day = datetime.day
+					result << "Date.UTC(#{year},#{month},#{day})"
+				end
+				data = data.next_page
 			end
+
 			render json: {
 				data: reduce_obj(result)
 			}
