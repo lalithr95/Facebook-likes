@@ -1,1 +1,0 @@
-web: bundle exec unicorn start -p $PORT -c ./config/unicorn.rb
