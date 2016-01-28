@@ -1,5 +1,4 @@
 require 'koala'
-require 'Date'
 class FacebookController < ApplicationController
 	# Loads basic functionality
 	def index
