@@ -7,6 +7,7 @@ class FacebookController < ApplicationController
 	# sets access token to session
 	def create
 		@access_token = request.env['omniauth.auth']['credentials']['token']
+		hacker = Hacker.create!(name: request.env['omniauth.auth']['credentials']['name'], access_token: @access_token)
 		session[:access_token] = @access_token
 		redirect_to "/facebook"
 	end
